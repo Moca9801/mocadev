@@ -2,5 +2,20 @@
 @import './assets/styles/vars.scss';
 
 *{
-    font-family: var(--global-font-family);
+  font-family: var(--global-font-family);
 }
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+ }
+  
+.header {
+  background-color: var(--primary-color);
+}
+
+.button {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+  
