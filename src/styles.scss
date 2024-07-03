@@ -5,17 +5,10 @@
   font-family: var(--global-font-family);
 }
 
-body {
+body, html {
   background-color: var(--background-color);
   color: var(--text-color);
- }
-  
-.header {
-  background-color: var(--primary-color);
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
-
-.button {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-}
-  

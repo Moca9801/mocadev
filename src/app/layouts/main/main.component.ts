@@ -1,21 +1,15 @@
 import { Component } from '@angular/core';
-import { ThemeService } from '../../services/theme.service';
+import { HeaderComponent } from '../../components/header/header.component';
+import { DrawerComponent } from '../../components/drawer/drawer.component';
 
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [],
+  imports: [HeaderComponent, DrawerComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
 export class MainComponent {
-  constructor(private themeService: ThemeService){}
-  isDarkTheme: boolean = false;
-  
-  toggleTheme() {
-    this.themeService.toggleTheme(); // Usar el servicio (si corresponde)
-    this.isDarkTheme = !this.themeService.isDarkTheme
-    document.body.classList.toggle('light-theme'); // O alternar la clase directamente
-  }
+ 
 }
