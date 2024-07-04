@@ -3,7 +3,10 @@
 header{
   height: 100% !important;
   width: 100% !important;
-  border: 1px solid var(--primary-color)
+}
+img{
+  height: auto;
+  width: 5rem;
 }
 
 button {
@@ -11,7 +14,7 @@ button {
   border: none;
   cursor: pointer;
   font-size: 24px;
-  color: var(--text-primary-color);
+  color: var(--text-color);
   padding: 0;
   margin: 0;
   display: flex;
@@ -22,4 +25,11 @@ button {
 button:focus {
   outline: none;
 }
-  
+
+span{
+  color: var(--text-secondary-color);
+}
+
+.title{
+  color: var(--text-secondary-color);
+}

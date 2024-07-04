@@ -1,4 +1,7 @@
 <header class="d-flex align-items-center justify-content-between p-3">
-    <div class="">Angel Moreno</div>
-    <button (click)="toggleTheme()"><i [class]=" isDarkTheme ? 'fas fa-moon' : 'fas fa-sun'"></i></button> 
+    <button><span class="material-icons fs-6">info</span></button>    
+    <div class="fs-5 title">Portfolio</div>
+    <button (click)="toggleTheme()">
+        <span class="material-icons fs-6">{{ isDarkTheme ? 'dark_mode' : 'light_mode' }}</span>
+    </button>
 </header>
