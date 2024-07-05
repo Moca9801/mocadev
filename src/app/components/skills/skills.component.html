@@ -1,22 +1,22 @@
 <div class="container">
-    <div class="card-title m-1">
-      <div class="fs-2 fw-medium" style="color: var(--primary-color);">Skills</div>
-      <div class="fs-4 fw-medium" style="margin-top: -1rem; color: var(--secondary-color);">{{ sections[currentSectionIndex] }}</div>
-    </div>
-  
-    <div class="skill-front-end">
-        @for (skill of currentSkills; track $index) {
-      <div class="skill">
-        <div class="title">{{ skill.name }}</div>
-        <div class="progress" role="progressbar" aria-label="Animated striped example" [attr.aria-valuenow]="skill.percentage" aria-valuemin="0" aria-valuemax="100">
-          <div class="progress-bar progress-bar-striped progress-bar-animated" [style.width.%]="skill.percentage"></div>
-        </div>
+  <div class="card-title m-1">
+    <div class="fs-2 fw-medium" style="color: var(--primary-color);">Skills</div>
+    <div class="fs-4 fw-medium" style="margin-top: -1rem; color: var(--secondary-color);">{{ sections[currentSectionIndex] }}</div>
+  </div>
+
+  <div class="skill-front-end">
+      @for (skill of currentSkills; track $index) {
+    <div class="skill">
+      <div class="title">{{ skill.name }}</div>
+      <div class="progress" role="progressbar" aria-label="Animated striped example" [attr.aria-valuenow]="skill.percentage" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" [style.width.%]="skill.percentage"></div>
       </div>
-    }
-    </div>   
-  </div>
+    </div>
+  }
+  </div>   
+</div>
   
-  <div class="next m-1">
-    <button class="text-end" (click)="nextSection()"><span class="material-icons fw-lighter fs-2">chevron_right</span></button>    
-  </div>
+<div class="next m-1">
+  <button class="text-end" (click)="nextSection()"><span class="material-icons fw-lighter fs-2">chevron_right</span></button>    
+</div>
   
