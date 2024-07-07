@@ -1,5 +1,3 @@
-@import '../../../assets/styles/vars.scss';
-
 .app-container {
     display: flex;
     flex-direction: column;
@@ -9,7 +7,6 @@
 
 .header {
     width: 100%; /* Ocupa todo el ancho disponible */
-    z-index: 2; /* Asegura que el header esté sobre los paneles */
 }
 
 .panel-container {
@@ -23,7 +20,6 @@
     height: 100%;
     box-sizing: border-box;
     z-index: 4;
-
 }
 
 .left-panel {

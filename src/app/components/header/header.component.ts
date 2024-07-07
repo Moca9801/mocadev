@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import { ThemeService } from '../../services/theme.service';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [ModalComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+
   constructor(private themeService: ThemeService){}
   isDarkTheme: boolean = false;
   
