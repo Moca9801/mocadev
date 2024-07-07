@@ -25,10 +25,10 @@ export class ProjectsComponent {
     'In this section you can see all the graphic projects I have done, from logos, banners, cards and more, the majority of this portfolio was developed at Microsoft publisher.'
   ];
   links = [
-    '/frontend-details',
-    '/backend-details',
-    '/design-details',
+    'https://credencial.cjj.gob.mx/',
     '',
+    'https://firmae-doc.judicaturajalisco.net/',
+    'https://cjj.gob.mx/',
     'https://www.figma.com/design/rvsi60iiHJzdcNfFsvFH5D/Vibes-mood?node-id=54796-1710&t=L6SxC781QINoehi3-1',
     'https://drive.google.com/drive/folders/10TKko2E0KpiOYoGN60yLzeUCL8qLrb2h?usp=sharing'
   ];

@@ -3,12 +3,14 @@ import { HeaderComponent } from '../../components/header/header.component';
 import { DrawerComponent } from '../../components/drawer/drawer.component';
 import { SkillsComponent } from '../../components/skills/skills.component';
 import { ProjectsComponent } from '../../components/projects/projects.component';
+import { ContactComponent } from '../../components/contact/contact.component';
+import { BioComponent } from '../../components/bio/bio.component';
 
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [HeaderComponent, DrawerComponent, SkillsComponent, ProjectsComponent],
+  imports: [HeaderComponent, DrawerComponent, SkillsComponent, ProjectsComponent, ContactComponent, BioComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
