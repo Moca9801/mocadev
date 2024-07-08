@@ -12,11 +12,11 @@ import { SplashComponent } from './components/splash/splash.component';
 export class AppComponent {
   title = 'mocadev';
 
-  isLoading = false;
+  isLoading = true;
 
   ngOnInit() {
-    /*setTimeout(() => {
+    setTimeout(() => {
       this.isLoading = false;
-    }, 5000);*/
+    }, 5000);
   }
 }
