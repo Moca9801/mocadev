@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    padding: 1rem;
   }
   
   .card-title {
@@ -14,36 +15,29 @@
     width: 100%;
     z-index: 2;
     height: auto;
+    margin-top: 1rem !important;
+  }
+
+  .name{
+    color: var(--primary-color);
+  }
+
+  .subname{
+    margin-top: -.6rem; 
+    color: var(--secondary-color);
   }
   
-  .skill-front-end {
+  .project {
     flex: 1;
     overflow-y: auto;
     z-index: 1;
     padding: 1rem;
   }
   
-  .skill {
-    margin-top: 0.5rem;
-  }
-  
   .title {
     text-align: start;
   }
   
-  img{
-    width: 50%;
-    height: auto;
-  }
-  .progress {
-    background-color: var(--secondary-color);
-    height: 0.3rem;
-    border-radius: 0;
-  }
-  
-  .progress-bar {
-    background-color: var(--primary-color);
-  }
   
   button {
     background: none;
@@ -65,6 +59,11 @@
   button:hover {
     color: var(--accent-color);
   }
+
+  .description{
+    font-size: smaller !important;
+    text-align: justify;
+  }
   
   .next {
     position: absolute;
@@ -72,17 +71,29 @@
     right: 0;
   }
   
-  @media (max-width: 1200px) {
+  @media (max-width: 1350px) {
     .card-title {
-      font-size: medium;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    .name{
+      margin-right: 1rem;
+      font-size: larger !important;
     }
   
-    .skill-front-end {
+    .subname{
+      margin-top: 0px;
+      font-size: larger !important;
+    }
+  
+    .project {
       padding: 0.75rem;
     }
-  
-    .skill .title {
-      font-size: 1rem;
+
+    .description{
+      font-size: small !important;
     }
   
     button {
@@ -95,13 +106,9 @@
       font-size: small;
     }
   
-    .skill-front-end {
+    .project {
       margin-top: 2rem;
       padding: 0.5rem;
-    }
-  
-    .skill .title {
-      font-size: 0.875rem;
     }
   
     button {

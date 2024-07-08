@@ -1,13 +1,12 @@
 <div class="container">
     <div class="card-title m-1">
-      <div class="fs-2 fw-medium" style="color: var(--primary-color);">Projects</div>
-      <div class="fs-4 fw-medium" style="margin-top: -.6rem; color: var(--secondary-color);">{{ sections[currentSectionIndex] }}</div>
+      <div class="fs-2 fw-medium name">Projects</div>
+      <div class="fs-4 fw-medium subname">{{ sections[currentSectionIndex] }}</div>
 
     </div>
   
-    <div class="skill-front-end">
-        
-        <div class="mt-2 fw-ligh" style="font-size: smaller; text-align: justify;">
+    <div class="project">
+        <div class="mt-2 fw-ligh description">
             {{ currentDescription  }}
         </div>
         <button class="text-end" (click)="navigateToLink()"><span class="material-icons fw-lighter fs-2" style="color: var(--accent-color);">arrow_right_alt</span></button>    
