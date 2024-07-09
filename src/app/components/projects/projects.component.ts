@@ -14,7 +14,6 @@ export class ProjectsComponent {
     'wedding invitation',
     'CJJ page maintenance',
     'Generic navigation model',
-    'Human resources system for CJJ', 
     'Vibes mood design',
     'Graphic design portfolio'
   ];
@@ -24,7 +23,6 @@ export class ProjectsComponent {
     'I developed this project in Nuxt 3 (Vue), with vuetify as the UI library, it is a frontend project.',
     'Currently, maintenance is carried out on various systems of the Judicial Council of the State of Jalisco, such as the main page, sentences and tickets, the application is built in Angula, with an API developed in Node.',
     'This is a frontend project, it has an original design and consists of a modern user interface to navigate, it is responsive, it is made with html, css and boostrap.',
-    'This project has not yet gone into production, but it consists of the digitization of the CJJ Human Resources department, including digital files, online procedures, construction of algorithms to optimize processes, all supported with the use of the electronic signature.',
     'In this project, the visual design of the mobile app was developed, I used Figma to carry out the design.',
     'In this section you can see all the graphic projects I have done, from logos, banners, cards and more, the majority of this portfolio was developed at Microsoft publisher.'
   ];

@@ -6,17 +6,19 @@ ul {
     list-style: none;
   }
   
-  .example-2 {
+  .social-media {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .example-2 .icon-content {
+  .social-media .icon-content {
     margin: 0 10px;
     position: relative;
     padding: 0.5rem;
+    display: flex !important;
+    
   }
-  .example-2 .icon-content .tooltip {
+  .social-media .icon-content .tooltip {
     position: absolute;
     top: 100%;
     right: 110%;
@@ -29,12 +31,12 @@ ul {
     font-size: 14px;
     transition: all 0.3s ease;
   }
-  .example-2 .icon-content:hover .tooltip {
+  .social-media .icon-content:hover .tooltip {
     opacity: 1;
     visibility: visible;
     top: -50px;
   }
-  .example-2 .icon-content a {
+  .social-media .icon-content a {
     position: relative;
     overflow: hidden;
     display: flex;
@@ -47,16 +49,16 @@ ul {
     background-color: transparent;
     transition: all 0.3s ease-in-out;
   }
-  .example-2 .icon-content a svg {
+  .social-media .icon-content a svg {
     position: relative;
     z-index: 1;
     width: 30px;
     height: 30px;
   }
-  .example-2 .icon-content a:hover {
+  .social-media .icon-content a:hover {
     color: var(--primary-color);
   }
-  .example-2 .icon-content a .filled {
+  .social-media .icon-content a .filled {
     position: absolute;
     top: auto;
     bottom: 0;
@@ -66,25 +68,25 @@ ul {
     background-color: #000;
     transition: all 0.3s ease-in-out;
   }
-  .example-2 .icon-content a:hover .filled {
+  .social-media .icon-content a:hover .filled {
     height: 100%;
   }
   
-  .example-2 .icon-content a[data-social="linkedin"] .filled,
-  .example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+  .social-media .icon-content a[data-social="linkedin"] .filled,
+  .social-media .icon-content a[data-social="linkedin"] ~ .tooltip {
     background-color: var(--background-color);
   }
   
-  .example-2 .icon-content a[data-social="github"] .filled,
-  .example-2 .icon-content a[data-social="github"] ~ .tooltip {
+  .social-media .icon-content a[data-social="github"] .filled,
+  .social-media .icon-content a[data-social="github"] ~ .tooltip {
     background-color:  var(--background-color);
   }
-  .example-2 .icon-content a[data-social="whatsapp"] .filled,
-  .example-2 .icon-content a[data-social="whatsapp"] ~ .tooltip {
+  .social-media .icon-content a[data-social="whatsapp"] .filled,
+  .social-media .icon-content a[data-social="whatsapp"] ~ .tooltip {
    background-color: var(--background-color);
   }
-  .example-2 .icon-content a[data-social="gmail"] .filled,
-  .example-2 .icon-content a[data-social="gmail"] ~ .tooltip {
+  .social-media .icon-content a[data-social="gmail"] .filled,
+  .social-media .icon-content a[data-social="gmail"] ~ .tooltip {
     background-color:  var(--background-color);
   }
   
