@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 :root {
     --primary-color: #93FFFB ;
     --secondary-color: #20788C;
@@ -7,7 +5,7 @@
     --text-color: #ffffff;
     --secondary-text-color: #97A1BA;
     --accent-color: #ed8831 ;
-    --global-font-family: 'Montserrat', sans-serif;
+    --global-font-family: 'Roboto', sans-serif;
 }
   
 .dark-theme {
@@ -17,7 +15,7 @@
     --text-color: #ffffff;
     --secondary-text-color: #97A1BA;
     --accent-color: #ed8831 ;
-    --global-font-family: 'Montserrat', sans-serif;
+    --global-font-family: 'Roboto', sans-serif;
 }
   
 .light-theme {
