@@ -112,13 +112,21 @@ button:hover {
 }
 
 @media (max-width: 780px) {
-  .card-title {
-    font-size: small;
-  }
+  
 
   .skill-front-end {
     margin-top: 2rem;
     padding: 0.5rem;
+  }
+
+  .name{
+    margin-right: 1rem;
+    font-size: larger !important;
+  }
+
+  .subname{
+    margin-top: 0px;
+    font-size: larger !important;
   }
 
   .skill .title {
