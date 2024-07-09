@@ -2,5 +2,9 @@
     <app-splash></app-splash>
 
 }@else if(!isLoading){
-    <router-outlet></router-outlet>
+    @if (isLargeScreen) {
+        <app-main></app-main>
+    } @else {
+        <app-main-small-devices></app-main-small-devices>
+    }
 }
