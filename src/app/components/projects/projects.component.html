@@ -9,9 +9,13 @@
         <div class="mt-2 fw-ligh description">
             {{ currentDescription  }}
         </div>
-        <button class="text-end" (click)="navigateToLink()"><span class="material-icons fw-lighter fs-2" style="color: var(--accent-color);">arrow_right_alt</span></button>    
-        
     </div>   
+    <button class="go-link fs-3" (click)="navigateToLink()"><span class="fw-bold fs-6 link text-end " style="border: 1px solid var(--accent-color); border-radius: .2rem; padding: .3rem;">show more</span></button>    
+
+  </div>
+
+  <div class="previus m-1">
+    <button class="text-end" (click)="previousSection()"><span class="material-icons fw-lighter fs-2">chevron_left</span></button>    
   </div>
     
   <div class="next m-1">

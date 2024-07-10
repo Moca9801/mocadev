@@ -59,14 +59,32 @@
   }
 
   .description{
-    font-size: smaller !important;
     text-align: justify;
+  }
+
+  .link{
+    color: var(--accent-color);
+    margin-left: auto !important;
+    text-align: end !important;
+  }
+
+  .link:hover{
+    font-size:medium !important;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-weight: lighter;
   }
   
   .next {
     position: absolute;
     bottom: 0;
     right: 0;
+  }
+
+  .previus {
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
   
   @media (max-width: 1350px) {
@@ -89,10 +107,6 @@
     .project {
       padding: 0.75rem;
     }
-
-    .description{
-      font-size: small !important;
-    }
   
     button {
       font-size: 20px;
@@ -100,8 +114,6 @@
   }
   
   @media (max-width: 780px) {
-
-  
     .project {
       margin-top: 2rem;
       padding: 0.5rem;

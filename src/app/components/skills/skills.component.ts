@@ -34,6 +34,9 @@ export class SkillsComponent {
   get currentSkills() {
     return this.skills[this.sections[this.currentSectionIndex]];
   }
+  previousSection() {
+    this.currentSectionIndex = (this.currentSectionIndex - 1 + this.sections.length) % this.sections.length;
+  }
 
   nextSection() {
     this.currentSectionIndex = (this.currentSectionIndex + 1) % this.sections.length;
