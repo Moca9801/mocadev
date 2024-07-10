@@ -44,6 +44,11 @@
   .subtitle{
     margin-top: 0px;
     font-size: larger !important;
-  }
+  } 
+}
 
+@media (max-width: 720px) {
+  .description{
+    font-size: small !important;
+  }
 }
