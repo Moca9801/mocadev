@@ -11,7 +11,7 @@ export class ProjectsComponent {
   sections = [
     'My wedding',
     'Digital ID Card for CJJ', 
-    'wedding invitation',
+    'Wedding invitation',
     'CJJ page maintenance',
     'Generic navigation model',
     'Vibes mood design',
