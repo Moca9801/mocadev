@@ -1,8 +1,10 @@
 .app-container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    overflow: hidden; /* Evita el scroll en el contenido */
+    height: 100%;
+    position: absolute;
+    overflow: hidden !important;
+    width: 100% !important;
 }
 
 .panel-container {
@@ -64,7 +66,6 @@
     top: 0;
     transform: translate(calc(-50% + 15px), -50%);
     z-index: 1;
-    overflow: hidden !important;
 }
 
 
