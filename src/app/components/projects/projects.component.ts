@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 })
 export class ProjectsComponent {
   sections = [
+    'Firmmo',
     'My wedding',
     'Digital ID Card for CJJ', 
     'Wedding invitation',
@@ -18,6 +19,7 @@ export class ProjectsComponent {
     'Graphic design portfolio'
   ];
   descriptions = [
+    'This platform is a startup that I intend to launch. It`s a web application for legally signing documents cryptographically in Mexico. At the moment, only the frontend has been developed due to budget constraints. The brand design, software development, and UI/UX design were done 100% by me.',
     'This is a digital invitation project created using HTML, CSS, and JavaScript. The invitation is designed to be sent and viewed through a web browser. I designed it for my wedding, which took place on July 17, 2022.',
     'This project generates official employee IDs and integrates them into Google and Apple wallets. It is developed in Angular and Node.js. The design and development were completely new.',
     'I developed this project in Nuxt 3 (Vue) with Vuetify as the UI library. It is a frontend project.',
@@ -26,6 +28,7 @@ export class ProjectsComponent {
     'In this project, the visual design of the mobile app was developed. I used Figma to carry out the design.',
     'In this section, you can see all the graphic projects I have done, from logos, banners, cards, and more. The majority of this portfolio was developed using Microsoft Publisher.'];
   links = [
+    'https://firmmo.netlify.app/',
     'https://boda-adrianayangel.netlify.app/',
     'https://credencial.cjj.gob.mx/',
     'https://brenda-and-jonathan.netlify.app/',
