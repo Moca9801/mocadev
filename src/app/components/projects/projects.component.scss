@@ -71,6 +71,10 @@
     padding: .3rem;
   }
 
+  .go-link{
+    font-size: medium !important;
+  }
+
   .link:hover{
     font-size:medium !important;
     background-color: var(--accent-color);
@@ -110,9 +114,21 @@
     .project {
       padding: 0.75rem;
     }
+
+    .go-link{
+      font-size: smaller !important;
+    }
+
+    .go-link:hover{
+      font-size: smaller;
+    }
   
     button {
-      font-size: 20px;
+      font-size: small;
+    }
+
+    .description{
+      font-size: small !important;
     }
   }
   
@@ -123,7 +139,7 @@
     }
   
     button {
-      font-size: 18px;
+      font-size: small;
     }
 
     .description{
@@ -132,6 +148,15 @@
 
     .link{
       font-size: small !important;
+    }
+
+    
+    .go-link{
+      font-size: smaller !important;
+    }
+
+    .go-link:hover{
+      font-size: smaller;
     }
   }
 
