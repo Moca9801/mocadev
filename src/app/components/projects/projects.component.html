@@ -1,24 +1,21 @@
 <div class="container">
-    <div class="card-title m-1">
-      <div class="fs-2 fw-medium name">Projects</div>
-      <div class="fs-4 fw-medium subname">{{ sections[currentSectionIndex] }}</div>
+  <div class="card-title m-1">
+    <div class="fs-2 fw-medium name">Projects</div>
+    <div class="fs-4 fw-medium subname">{{ sections[currentSectionIndex] }}</div>
+  </div>
 
+  <div class="project">
+    <div class="mt-2 fw-ligh description">
+      {{ currentDescription  }}
     </div>
+  </div>   
+  <button class="go-link fs-3" (click)="openProjectModal()" ><span class="fw-bold link text-end">Show more</span></button>    
+</div>
+
+<div class="previus m-1">
+  <button class="text-end" (click)="previousSection()"><span class="material-icons fw-lighter fs-2">chevron_left</span></button>    
+</div>
   
-    <div class="project">
-        <div class="mt-2 fw-ligh description">
-            {{ currentDescription  }}
-        </div>
-    </div>   
-    <button class="go-link fs-3" (click)="navigateToLink()"><span class="fw-bold link text-end">Show more</span></button>    
-
-  </div>
-
-  <div class="previus m-1">
-    <button class="text-end" (click)="previousSection()"><span class="material-icons fw-lighter fs-2">chevron_left</span></button>    
-  </div>
-    
-  <div class="next m-1">
-    <button class="text-end" (click)="nextSection()"><span class="material-icons fw-lighter fs-2">chevron_right</span></button>    
-  </div>
-    
+<div class="next m-1">
+  <button class="text-end" (click)="nextSection()"><span class="material-icons fw-lighter fs-2">chevron_right</span></button>    
+</div>

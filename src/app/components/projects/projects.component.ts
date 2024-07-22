@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { ModalProjectsComponent } from "../modal-projects/modal-projects.component";
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [],
+  imports: [ModalProjectsComponent, MatDialogModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
@@ -37,8 +39,33 @@ export class ProjectsComponent {
     'https://www.figma.com/design/rvsi60iiHJzdcNfFsvFH5D/Vibes-mood?node-id=54796-1710&t=L6SxC781QINoehi3-1',
     'https://drive.google.com/drive/folders/10TKko2E0KpiOYoGN60yLzeUCL8qLrb2h?usp=sharing'
   ];
+  technologies =[
+    ['Vue','Vuetify','Node'],
+    ['HTML', 'CSS', 'JS'],
+    ['Angular', 'Node', 'OracleDB'],
+    ['Vue', 'Vuetify'],
+    ['Angular','Node', 'MySQL', 'OracleDB'],
+    ['Angular','Boostrap'],
+    ['Figma'],
+    ['Microsoft Publisher'],
+  ];
+
+  video = [
+    '../../../assets/videos/Firmmo.mp4',
+    '../../../assets/videos/MyWedding.mp4',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+
+  ];
+
   currentSectionIndex = 0;
   
+  constructor(private dialog: MatDialog) {}
+
 
   get currentDescription() {
     return this.descriptions[this.currentSectionIndex];
@@ -59,4 +86,17 @@ export class ProjectsComponent {
   navigateToLink() {
     window.open(this.currentLink, '_blank');
   }
+
+  openProjectModal() {
+    this.dialog.open(ModalProjectsComponent, {
+      data: {
+        title: this.sections[this.currentSectionIndex],
+        description: this.descriptions[this.currentSectionIndex],
+        link: this.links[this.currentSectionIndex],
+        tech: this.technologies[this.currentSectionIndex],
+        video: this.video[this.currentSectionIndex]
+      }
+    });
+  }
+
 }

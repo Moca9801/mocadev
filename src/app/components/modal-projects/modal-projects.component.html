@@ -1,0 +1,19 @@
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" mat-dialog-close>&times;</span>
+        <div class="modal-body">
+            <p class="small-text">Project</p>
+            <h1>{{ data.title }}</h1>
+            <div>
+                <video width="80%" height="auto" controls>
+                    <source [src]="data.video"  type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video>
+            </div>
+        </div>
+        <div class="link">
+            <a class="link-button" href="{{ data.link }}" target="_blank">Visit page</a>
+        </div>
+    </div>
+</div>
+  
