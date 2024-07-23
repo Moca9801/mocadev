@@ -12,9 +12,9 @@
   .modal-content {
     background-color: var(--background-color);
     border: 1px solid var(--primary-color);
-    margin: 1% auto;
-    padding: 20px;
-    max-width: 600px;
+    padding: 1rem;
+    width: 80%;
+    height: 90%;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     position: relative;
   }
@@ -75,6 +75,16 @@
     background-color: var(--accent-color);
     color: var(--primary-text-color);
   }
+
+  .carousel{
+    height: auto;
+  }
+
+  .carousel-inner{
+    width: 100%;
+    height: auto;
+  }
+  
   /* Responsive styles */
   @media (max-width: 768px) {
     .modal-content {

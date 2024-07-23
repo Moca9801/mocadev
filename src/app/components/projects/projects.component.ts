@@ -50,15 +50,24 @@ export class ProjectsComponent {
     ['Microsoft Publisher'],
   ];
 
-  video = [
-    '../../../assets/videos/Firmmo.mp4',
-    '../../../assets/videos/MyWedding.mp4',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
+  folderPath = [
+    [
+      '../../../assets/img/firmmo/1.png',
+      '../../../assets/img/firmmo/2.png',
+      '../../../assets/img/firmmo/3.png',
+      '../../../assets/img/firmmo/4.png',
+      '../../../assets/img/firmmo/5.png',
+      '../../../assets/img/firmmo/6.png',
+      '../../../assets/img/firmmo/7.png',
+      '../../../assets/img/firmmo/8.png',
+    ],
+    [
+      '../../../assets/img/MyWedding/1.png',
+      '../../../assets/img/MyWedding/2.png',
+      '../../../assets/img/MyWedding/3.png',
+      '../../../assets/img/MyWedding/4.png',
+      '../../../assets/img/MyWedding/5.png',
+    ],
 
   ];
 
@@ -94,7 +103,7 @@ export class ProjectsComponent {
         description: this.descriptions[this.currentSectionIndex],
         link: this.links[this.currentSectionIndex],
         tech: this.technologies[this.currentSectionIndex],
-        video: this.video[this.currentSectionIndex]
+        imagePaths: this.folderPath[this.currentSectionIndex]
       }
     });
   }
