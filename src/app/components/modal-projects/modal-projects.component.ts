@@ -1,9 +1,10 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 
-interface CarouselImage {
+interface Image {
   src: string;
   alt: string;
+  name?: string;
 }
 
 @Component({
@@ -14,12 +15,15 @@ interface CarouselImage {
   styleUrls: ['./modal-projects.component.scss']
 })
 export class ModalProjectsComponent implements OnInit {
-  images: CarouselImage[] = [];
+  images: Image[] = [];
+  iconsTech: Image[] = [];
+
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
 
   ngOnInit() {
     this.loadImages();
+    this.loadIcons();
   }
 
   loadImages() {
@@ -42,5 +46,31 @@ export class ModalProjectsComponent implements OnInit {
     } else {
       console.warn('No image paths provided');
     }
+  }
+
+  loadIcons(){
+    if (this.data.tech) {
+      if (Array.isArray(this.data.tech)) {
+        // Si es un array, asumimos que es un array de rutas de imagen
+        this.iconsTech = this.data.tech.map((path: string, index: number) => ({
+          src: path,
+          alt: `Icon ${index + 1}`,
+          name: (path.replace("../../../assets/img/technologies/", "").replace(".svg", ""))
+        }));
+      } else if (typeof this.data.tech === 'string') {
+        // Si es una cadena, asumimos que es una sola ruta de imagen
+        this.iconsTech = [{
+          src: this.data.tech,
+          alt: 'Icon 1',
+          name: this.data.tech.replace("../../../assets/img/technologies/", "").replace(".svg", "")
+        }];
+      } else {
+        console.error('Unexpected type for tech:', typeof this.data.tech);
+      }
+    } else {
+      console.warn('No image paths provided');
+    }
+
+    console.log(this.iconsTech)
   }
 }

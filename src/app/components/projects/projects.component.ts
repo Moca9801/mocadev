@@ -40,14 +40,18 @@ export class ProjectsComponent {
     'https://drive.google.com/drive/folders/10TKko2E0KpiOYoGN60yLzeUCL8qLrb2h?usp=sharing'
   ];
   technologies =[
-    ['Vue','Vuetify','Node'],
-    ['HTML', 'CSS', 'JS'],
-    ['Angular', 'Node', 'OracleDB'],
-    ['Vue', 'Vuetify'],
-    ['Angular','Node', 'MySQL', 'OracleDB'],
-    ['Angular','Boostrap'],
-    ['Figma'],
-    ['Microsoft Publisher'],
+    [
+      '../../../assets/img/technologies/vue.svg',
+      '../../../assets/img/technologies/vuetify.svg',
+      '../../../assets/img/technologies/node.svg'
+    ],
+    [
+      '../../../assets/img/technologies/html.svg',
+      '../../../assets/img/technologies/css.svg',
+      '../../../assets/img/technologies/javascript.svg'
+    ],
+
+   
   ];
 
   folderPath = [
@@ -70,6 +74,11 @@ export class ProjectsComponent {
     ],
 
   ];
+
+  video = [
+    "../../../assets/videos/Firmmo.mp4", 
+    "../../../assets/videos/MyWedding.mp4", 
+  ]
 
   currentSectionIndex = 0;
   
@@ -103,7 +112,8 @@ export class ProjectsComponent {
         description: this.descriptions[this.currentSectionIndex],
         link: this.links[this.currentSectionIndex],
         tech: this.technologies[this.currentSectionIndex],
-        imagePaths: this.folderPath[this.currentSectionIndex]
+        imagePaths: this.folderPath[this.currentSectionIndex],
+        video: this.video[this.currentSectionIndex]
       }
     });
   }
