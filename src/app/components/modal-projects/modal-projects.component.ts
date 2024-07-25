@@ -1,5 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { MatTooltipModule } from '@angular/material/tooltip';
+
 
 interface Image {
   src: string;
@@ -10,7 +12,7 @@ interface Image {
 @Component({
   selector: 'app-modal-projects',
   standalone: true,
-  imports: [MatDialogModule],
+  imports: [MatDialogModule, MatTooltipModule],
   templateUrl: './modal-projects.component.html',
   styleUrls: ['./modal-projects.component.scss']
 })
@@ -19,7 +21,10 @@ export class ModalProjectsComponent implements OnInit {
   iconsTech: Image[] = [];
 
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
+  constructor(
+    public dialogRef: MatDialogRef<ModalProjectsComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any
+  ) {}
 
   ngOnInit() {
     this.loadImages();
@@ -72,5 +77,13 @@ export class ModalProjectsComponent implements OnInit {
     }
 
     console.log(this.iconsTech)
+  }
+
+  nextProject() {
+    this.dialogRef.close('next');
+  }
+
+  previousProject() {
+    this.dialogRef.close('previous');
   }
 }

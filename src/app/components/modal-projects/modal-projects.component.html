@@ -1,8 +1,19 @@
 <div id="myModal" class="modal">
   <div class="modal-content">
-    <span class="close" mat-dialog-close>&times;</span>
+    <header class="d-flex align-items-center justify-content-between p-3">
+      <div id="myBtn" class="d-flex">
+        <button (click)="previousProject()" matTooltip="Previus project" matTooltipPosition="below">
+          <span class="header-btn material-icons fs-6 fw-lighter">arrow_back_ios</span>
+        </button>    
+        <button (click)="nextProject()" matTooltip="Next project" matTooltipPosition="below">
+          <span class="header-btn material-icons fs-6 fw-lighter">arrow_forward_ios</span>
+        </button>   
+      </div>
+      <div class="fs-5 fw-lighter title">{{data.title}}</div>
+      <button matTooltip="close" matTooltipPosition="below"><span class="header-btn material-icons fs-6 fw-lighter" mat-dialog-close >close</span></button>
+    </header>
+  
     <div class="modal-body">
-      <h1 class="title">{{ data.title }}</h1>
       <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
           <button type="button" 
@@ -46,7 +57,7 @@
       <div class="link">
         <div class="technology-icons">
           @for (icon of iconsTech; track icon) {
-            <button class="tech-button" [title]="icon.name"  [attr.title]="icon.name" >
+            <button class="tech-button" matTooltip="{{icon.name}}" matTooltipPosition="below" >
               <img class="tech-icon" [src]="icon.src" [alt]="icon.name">
             </button>
           }

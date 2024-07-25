@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalProjectsComponent } from "../modal-projects/modal-projects.component";
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-projects',
@@ -50,6 +50,17 @@ export class ProjectsComponent {
       '../../../assets/img/technologies/css.svg',
       '../../../assets/img/technologies/javascript.svg'
     ],
+    [
+      '../../../assets/img/technologies/angular.svg',
+      '../../../assets/img/technologies/boostrap.svg',
+      '../../../assets/img/technologies/typescript.svg',
+      '../../../assets/img/technologies/node.svg',
+      '../../../assets/img/technologies/oracle.svg'
+    ],
+    [
+      '../../../assets/img/technologies/vue.svg',
+      '../../../assets/img/technologies/vuetify.svg',
+    ],
 
    
   ];
@@ -78,6 +89,10 @@ export class ProjectsComponent {
   video = [
     "../../../assets/videos/Firmmo.mp4", 
     "../../../assets/videos/MyWedding.mp4", 
+    "../../../assets/videos/credencial_CJJ.mp4",
+    "../../../assets/videos/brend-&-jona.mp4",
+    "../../../assets/videos/generic-nav-model.mp4",
+
   ]
 
   currentSectionIndex = 0;
@@ -105,17 +120,26 @@ export class ProjectsComponent {
     window.open(this.currentLink, '_blank');
   }
 
-  openProjectModal() {
-    this.dialog.open(ModalProjectsComponent, {
+  openProjectModal(index: number) {
+    const dialogRef: MatDialogRef<ModalProjectsComponent> = this.dialog.open(ModalProjectsComponent, {
       data: {
-        title: this.sections[this.currentSectionIndex],
-        description: this.descriptions[this.currentSectionIndex],
-        link: this.links[this.currentSectionIndex],
-        tech: this.technologies[this.currentSectionIndex],
-        imagePaths: this.folderPath[this.currentSectionIndex],
-        video: this.video[this.currentSectionIndex]
+        title: this.sections[index],
+        description: this.descriptions[index],
+        link: this.links[index],
+        tech: this.technologies[index],
+        imagePaths: this.folderPath[index],
+        video: this.video[index],
+        currentIndex: index,
+        totalProjects: this.sections.length
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'next') {
+        this.openProjectModal((index + 1) % this.sections.length);
+      } else if (result === 'previous') {
+        this.openProjectModal((index - 1 + this.sections.length) % this.sections.length);
       }
     });
   }
-
 }
