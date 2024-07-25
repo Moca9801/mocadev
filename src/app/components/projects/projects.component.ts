@@ -61,8 +61,26 @@ export class ProjectsComponent {
       '../../../assets/img/technologies/vue.svg',
       '../../../assets/img/technologies/vuetify.svg',
     ],
-
-   
+    [
+      '../../../assets/img/technologies/angular.svg',
+      '../../../assets/img/technologies/boostrap.svg',
+      '../../../assets/img/technologies/typescript.svg',
+      '../../../assets/img/technologies/node.svg',
+      '../../../assets/img/technologies/oracle.svg'
+    ],
+    [
+      '../../../assets/img/technologies/angular.svg',
+      '../../../assets/img/technologies/boostrap.svg',
+      '../../../assets/img/technologies/html.svg',
+      '../../../assets/img/technologies/css.svg',
+      '../../../assets/img/technologies/typescript.svg',
+    ],
+    [
+      '../../../assets/img/technologies/figma.svg',
+    ],
+    [
+      '../../../assets/img/technologies/publisher.svg',
+    ],
   ];
 
   folderPath = [
@@ -83,7 +101,60 @@ export class ProjectsComponent {
       '../../../assets/img/MyWedding/4.png',
       '../../../assets/img/MyWedding/5.png',
     ],
-
+    [
+      '../../../assets/img/credencial_cjj/1.png',
+      '../../../assets/img/credencial_cjj/2.png',
+      '../../../assets/img/credencial_cjj/3.png',
+      '../../../assets/img/credencial_cjj/4.png',
+      '../../../assets/img/credencial_cjj/5.png',
+      '../../../assets/img/credencial_cjj/6.png',
+    ],
+    [
+      '../../../assets/img/bren&jona/1.png',
+      '../../../assets/img/bren&jona/2.png',
+      '../../../assets/img/bren&jona/3.png',
+      '../../../assets/img/bren&jona/4.png',
+      '../../../assets/img/bren&jona/5.png',
+      '../../../assets/img/bren&jona/6.png',
+    ],
+    [
+      '../../../assets/img/cjj/1.png',
+      '../../../assets/img/cjj/2.png',
+      '../../../assets/img/cjj/3.png',
+      '../../../assets/img/cjj/4.png',
+      '../../../assets/img/cjj/5.png',
+      '../../../assets/img/cjj/6.png',
+    ],
+    [
+      '../../../assets/img/generic-nav-model/1.png',
+      '../../../assets/img/generic-nav-model/2.png',
+      '../../../assets/img/generic-nav-model/3.png',
+      '../../../assets/img/generic-nav-model/4.png',
+      '../../../assets/img/generic-nav-model/5.png',
+      '../../../assets/img/generic-nav-model/6.png',
+    ],
+    [
+      '../../../assets/img/vibesMood/1.png',
+      '../../../assets/img/vibesMood/2.png',
+      '../../../assets/img/vibesMood/3.png',
+      '../../../assets/img/vibesMood/4.png',
+      '../../../assets/img/vibesMood/5.png',
+      '../../../assets/img/vibesMood/6.png',
+    ],
+    [
+      '../../../assets/img/graphic_design/1.png',
+      '../../../assets/img/graphic_design/2.png',
+      '../../../assets/img/graphic_design/3.png',
+      '../../../assets/img/graphic_design/4.png',
+      '../../../assets/img/graphic_design/5.png',
+      '../../../assets/img/graphic_design/6.png',
+      '../../../assets/img/graphic_design/7.png',
+      '../../../assets/img/graphic_design/8.png',
+      '../../../assets/img/graphic_design/9.png',
+      '../../../assets/img/graphic_design/10.png',
+      '../../../assets/img/graphic_design/11.png',
+      '../../../assets/img/graphic_design/12.png',
+    ],
   ];
 
   video = [
@@ -91,8 +162,10 @@ export class ProjectsComponent {
     "../../../assets/videos/MyWedding.mp4", 
     "../../../assets/videos/credencial_CJJ.mp4",
     "../../../assets/videos/brend-&-jona.mp4",
+    "../../../assets/videos/CJJ.mp4",
     "../../../assets/videos/generic-nav-model.mp4",
-
+    "../../../assets/videos/VibesMood.mp4",
+    "../../../assets/videos/portfolioGrahicDesign.mp4",
   ]
 
   currentSectionIndex = 0;
