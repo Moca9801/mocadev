@@ -35,7 +35,7 @@ export class ProjectsComponent {
     'https://credencial.cjj.gob.mx/',
     'https://brenda-and-jonathan.netlify.app/',
     'https://cjj.gob.mx/',
-    'https://github.com/Moca9801/Generic-navigation-model',
+    'https://generic-nav-model.netlify.app/',
     'https://www.figma.com/design/rvsi60iiHJzdcNfFsvFH5D/Vibes-mood?node-id=54796-1710&t=L6SxC781QINoehi3-1',
     'https://drive.google.com/drive/folders/10TKko2E0KpiOYoGN60yLzeUCL8qLrb2h?usp=sharing'
   ];
