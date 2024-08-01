@@ -1,12 +1,16 @@
-<div id="myModal" class="modal" [ngStyle]="{'display': display}">
+<div id="myModal" class="modal">
   <div class="modal-content">
-    <span class="close" (click)="closeModal()">&times;</span>
+    <header class="d-flex align-items-center justify-content-between p-3">
+      <div class="fw-lighter fs-6">v0.4.0</div>
+      <div class="fs-6 fw-lighter title">Developed by:</div>
+      <button matTooltip="close" matTooltipPosition="below"><span class="header-btn material-icons fs-6 fw-lighter" mat-dialog-close >close</span></button>
+    </header>
     <div class="modal-body">
-      <p class="small-text">Developed by:</p>
-      <h1>Angel Israel Moreno Castellanos</h1>
+      <h3>Angel Israel Moreno Castellanos</h3>
       <p class="description">
-        The purpose of this portfolio is to provide a comprehensive overview of my skills and expertise in software development. Here, you will not only find a showcase of my technical abilities and projects but also a representation of my passion and dedication to programming. This space is designed to reflect who I am both as a professional and as an individual, highlighting my commitment to excellence, innovation, and continuous learning. Through this portfolio, I hope you can gain a deeper understanding of my experience, my approach to work, and my enthusiasm for contributing to meaningful projects in the field of software development.
+        This portfolio aims to share my skills, experiences, and career with you. My passion for engineering and software development motivates me every day to build tools that contribute positively to the world.      
       </p>
+      <img src="../../../assets/img/Angel_Moreno.png" alt="">
     </div>
   </div>
 </div>

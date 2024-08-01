@@ -5,12 +5,13 @@ import { MainComponent } from './layouts/main/main.component';
 import { MainSmallDevicesComponent } from './layouts/main-small-devices/main-small-devices.component';
 import { BreakpointObserver, BreakpointState, Breakpoints } from '@angular/cdk/layout';
 import { Subscription } from 'rxjs';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, SplashComponent, MainComponent, MainSmallDevicesComponent],
+  imports: [RouterOutlet, SplashComponent, MainComponent, MainSmallDevicesComponent, TranslateModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
