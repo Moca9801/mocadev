@@ -16,17 +16,17 @@ import { Subscription } from 'rxjs';
 })
 export class AppComponent implements OnDestroy {
   title = 'mocadev';
-  isLoading = true;
+  isLoading = false;
   breakpointSub:any = Subscription;
   isLargeScreen: boolean = false;
 
   constructor(private breakpointObserver: BreakpointObserver){}
 
   ngOnInit() {
-    setTimeout(() => {
+   /* setTimeout(() => {
       this.isLoading = false;
     }, 5000);
-
+*/
     this.breakpointSub = this.breakpointObserver
       .observe([Breakpoints.Large, Breakpoints.XLarge])
       .subscribe((state: BreakpointState) => {

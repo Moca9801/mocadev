@@ -29,6 +29,48 @@
   .description{
     text-align: justify;
   }
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--text-color);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  button:hover {
+    color: var(--accent-color);
+  }
+
+  .link{
+    color: var(--accent-color);
+    margin-left: auto !important;
+    text-align: end !important;
+    border: 1px solid var(--accent-color); 
+    border-radius: .2rem; 
+    padding: .3rem;
+  }
+
+  .go-link{
+    font-size: medium !important;
+  }
+
+  .link:hover{
+    font-size:medium !important;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-weight: lighter;
+  }
+  
   
 @media (max-width: 1350px) {
   .card-title {
@@ -48,10 +90,41 @@
   .description{
     font-size: small !important;
   }
+
+  .go-link{
+    font-size: smaller !important;
+  }
+
+  .go-link:hover{
+    font-size: smaller;
+  }
+
+  button {
+    font-size: small;
+  }
+
 }
 
 @media (max-width: 720px) {
   .description{
     font-size: small !important;
+  }
+
+  button {
+    font-size: small;
+    margin-top: 1rem;
+  }
+
+  .link{
+    font-size: small !important;
+  }
+
+  
+  .go-link{
+    font-size: smaller !important;
+  }
+
+  .go-link:hover{
+    font-size: smaller;
   }
 }
