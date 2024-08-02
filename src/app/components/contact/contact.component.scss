@@ -4,10 +4,13 @@
 
 .subtitle{
   color: var(--secondary-color);
+  margin-top: -.6rem; 
 }
 
 ul {
     list-style: none;
+    padding: 0 !important;
+    margin-top: 1.5rem;
   }
   
   .social-media {
@@ -25,7 +28,7 @@ ul {
   .social-media .icon-content .tooltip {
     position: absolute;
     top: 100%;
-    right: 110%;
+    right: 100%;
     transform: translateY(200%);
     color: transparent;
     padding: 6px 10px;
@@ -55,8 +58,8 @@ ul {
   .social-media .icon-content a svg {
     position: relative;
     z-index: 1;
-    width: 30px;
-    height: 30px;
+    width: 2rem;
+    height: 2rem;
   }
   .social-media .icon-content a:hover {
     color: var(--primary-color);
@@ -114,5 +117,9 @@ ul {
 @media (max-width: 1350px) {
   .title{
     font-size: x-large !important;
+  }
+
+  .subtitle{
+    font-size: medium !important;
   }
 }
