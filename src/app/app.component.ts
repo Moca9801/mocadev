@@ -17,17 +17,17 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class AppComponent implements OnDestroy {
   title = 'mocadev';
-  isLoading = false;
+  isLoading = true;
   breakpointSub:any = Subscription;
   isLargeScreen: boolean = false;
 
   constructor(private breakpointObserver: BreakpointObserver){}
 
   ngOnInit() {
-   /*setTimeout(() => {
+   setTimeout(() => {
       this.isLoading = false;
     }, 5000);
-*/
+
     this.breakpointSub = this.breakpointObserver
       .observe([Breakpoints.Large, Breakpoints.XLarge])
       .subscribe((state: BreakpointState) => {
