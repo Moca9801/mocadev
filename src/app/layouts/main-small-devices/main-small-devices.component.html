@@ -81,8 +81,28 @@
                     <span class="radio-button__custom"></span>
                     {{"CONTACT_TITLE" | translate}}
                   </label>
+                </div>
+            </div>  
+            
+            <div class="radio-inputs">
+                <label class="radio" (click)="onRadioChange('Bio')">
+                  <input type="radio" name="radio" checked="">
+                  <span class="name">{{"BIO_TITLE" | translate}}</span>
+                </label>
+                <label class="radio" (click)="onRadioChange('Projects')">
+                  <input type="radio" name="radio">
+                  <span class="name"> {{"PROJECTS_TITLE" | translate}}</span>
+                </label>
+                <label class="radio" (click)="onRadioChange('Skills')">
+                  <input type="radio" name="radio">
+                  <span class="name"> {{"SKILLS_TITLE" | translate}}</span>
+                </label>
+                <label class="radio" (click)="onRadioChange('Contact')">
+                    <input type="radio" name="radio">
+                    <span class="name">{{"CONTACT_TITLE" | translate}}</span>
+                  </label>
             </div>
-        </div>   
+            
         </div>
         <div class="preview">
             @if (selectedComponent === 'Bio') {
