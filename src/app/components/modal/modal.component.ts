@@ -1,29 +1,19 @@
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, Input } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-modal',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatDialogModule, MatTooltipModule, TranslateModule],
   templateUrl: './modal.component.html',
   styleUrl: './modal.component.scss'
 })
 export class ModalComponent {
-  @Input() display: string = 'none';
+  constructor(private translate: TranslateService, @Inject(MAT_DIALOG_DATA) public data: any){
+    this.translate = this.data.language;
 
-  openModal() {
-    this.display = 'block';
-  }
-
-  closeModal() {
-    this.display = 'none';
-  }
-
-  @HostListener('window:click', ['$event'])
-  onWindowClick(event: MouseEvent) {
-    const modal = document.getElementById('myModal');
-    if (event.target === modal) {
-      this.display = 'none';
-    }
   }
 }

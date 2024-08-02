@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 interface Image {
@@ -12,7 +13,7 @@ interface Image {
 @Component({
   selector: 'app-modal-projects',
   standalone: true,
-  imports: [MatDialogModule, MatTooltipModule],
+  imports: [MatDialogModule, MatTooltipModule, TranslateModule],
   templateUrl: './modal-projects.component.html',
   styleUrls: ['./modal-projects.component.scss']
 })
@@ -23,8 +24,12 @@ export class ModalProjectsComponent implements OnInit {
 
   constructor(
     public dialogRef: MatDialogRef<ModalProjectsComponent>,
+    private translate: TranslateService,
     @Inject(MAT_DIALOG_DATA) public data: any
-  ) {}
+  ) {
+    this.translate = this.data.language;
+
+  }
 
   ngOnInit() {
     this.loadImages();

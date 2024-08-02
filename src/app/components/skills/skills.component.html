@@ -1,6 +1,6 @@
 <div class="container">
   <div class="card-title m-1">
-    <div class="fs-2 fw-medium name">Skills</div>
+    <div class="fs-2 fw-medium name">{{ "SKILLS_TITLE" | translate }}</div>
     <div class="fs-4 fw-medium subname">{{ sections[currentSectionIndex] }}</div>
   </div>
 
@@ -17,9 +17,9 @@
 </div>
 
 <div class="previus m-1">
-  <button class="text-end" (click)="previousSection()"><span class="material-icons fw-lighter fs-2">chevron_left</span></button>    
+  <button class="text-end" (click)="previousSection()" [matTooltip]="'PREV_BUTTON'| translate" matTooltipPosition="below"><span class="material-icons fw-lighter fs-2">chevron_left</span></button>    
 </div>
 <div class="next m-1">
-  <button class="text-end" (click)="nextSection()"><span class="material-icons fw-lighter fs-2">chevron_right</span></button>    
+  <button class="text-end" (click)="nextSection()"  [matTooltip]="'NEXT_BUTTON'| translate" matTooltipPosition="below"><span class="material-icons fw-lighter fs-2">chevron_right</span></button>    
 </div>
   

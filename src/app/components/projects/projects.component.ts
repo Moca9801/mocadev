@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { ModalProjectsComponent } from "../modal-projects/modal-projects.component";
 import { MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [ModalProjectsComponent, MatDialogModule],
+  imports: [ModalProjectsComponent, MatDialogModule, TranslateModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
@@ -21,14 +22,16 @@ export class ProjectsComponent {
     'Graphic design portfolio'
   ];
   descriptions = [
-    'This platform is a startup that I intend to launch. It`s a web application for legally signing documents cryptographically in Mexico. At the moment, only the frontend has been developed due to budget constraints. The brand design, software development, and UI/UX design were done 100% by me.',
-    'This is a digital invitation project created using HTML, CSS, and JavaScript. The invitation is designed to be sent and viewed through a web browser. I designed it for my wedding, which took place on July 17, 2022.',
-    'This project generates official employee IDs and integrates them into Google and Apple wallets. It is developed in Angular and Node.js. The design and development were completely new.',
-    'I developed this project in Nuxt 3 (Vue) with Vuetify as the UI library. It is a frontend project.',
-    'Currently, maintenance is carried out on various systems of the Judicial Council of the State of Jalisco, such as the main page, sentences, and tickets. The application is built in Angular, with an API developed in Node.js.',
-    'This is a frontend project with an original design and a modern user interface for navigation. It is responsive and made with HTML, CSS, and Bootstrap.',
-    'In this project, the visual design of the mobile app was developed. I used Figma to carry out the design.',
-    'In this section, you can see all the graphic projects I have done, from logos, banners, cards, and more. The majority of this portfolio was developed using Microsoft Publisher.'];
+    'FIRMMO_DESCRIPT',
+    'MY_WEDDING_DESCRIPT',
+    'ID_CARD_DESCRIPT',
+    'WEDDING_INV_DESCRIPTION',
+    'CJJ_MAINTENNANCE_DESCRIPT',
+    'GENERIC_NAV_DESCRIPT',
+    'VIBES_MOOD_DESCRIP',
+    'GRAPHIG_PORT_DESCRIPT'
+
+  ]
   links = [
     'https://firmmo.netlify.app/',
     'https://boda-adrianayangel.netlify.app/',
@@ -170,7 +173,9 @@ export class ProjectsComponent {
 
   currentSectionIndex = 0;
   
-  constructor(private dialog: MatDialog) {}
+  constructor(private dialog: MatDialog, private translate: TranslateService) {
+    this.translate.setDefaultLang('en');
+  }
 
 
   get currentDescription() {
@@ -203,7 +208,8 @@ export class ProjectsComponent {
         imagePaths: this.folderPath[index],
         video: this.video[index],
         currentIndex: index,
-        totalProjects: this.sections.length
+        totalProjects: this.sections.length,
+        language: this.translate
       }
     });
 

@@ -4,19 +4,22 @@ import { SkillsComponent } from '../../components/skills/skills.component';
 import { ProjectsComponent } from '../../components/projects/projects.component';
 import { ContactComponent } from '../../components/contact/contact.component';
 import { BioComponent } from '../../components/bio/bio.component';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [HeaderComponent, SkillsComponent, ProjectsComponent, ContactComponent, BioComponent],
+  imports: [HeaderComponent, SkillsComponent, ProjectsComponent, ContactComponent, BioComponent, TranslateModule],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
 export class MainComponent implements AfterViewInit {
   currentYear: number = new Date().getFullYear();
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2, private transalte: TranslateService) {
+    this.transalte.setDefaultLang('en');
+  }
   
   ngAfterViewInit() {
     const cursor = this.renderer.selectRootElement('.blob');

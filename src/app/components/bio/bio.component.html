@@ -1,14 +1,12 @@
 <div class="container">
-    <div class="card-title m-1">
-      <div class="fs-2 fw-medium title" >Bio</div>
-      <div class="fs-4 fw-medium subtitle">Personal</div>
-    </div>
-  
-    <div class="description">
-        <div class="mt-2 fw-ligh description">
-          Mechatronic Engineer and Electronic Development Technologist, dedicated and passionate about engineering and software development. My life motto is "living to serve," always seeking great challenges where I can contribute my values, initiative, and creativity. I’m a quick learner with outstanding interpersonal skills and a proactive, initiative-driven attitude in everything I do.        </div>
-    </div>   
+  <div class="card-title m-1">
+    <div class="fs-2 fw-medium title" >{{"BIO_TITLE" | translate}}</div>
+    <div class="fs-4 fw-medium subtitle">{{"BIO_SUBTITLE" | translate}}</div>
   </div>
-    
- 
-    
+
+  <div class="description">
+    <div class="mt-2 fw-ligh description">{{ "BIO_DESCRIPTION" | translate}}</div>
+  </div>   
+  <button class="go-link fs-3 mt-2" (click)="openProjectModal()"><span class="fw-bold link text-end">{{ "BIO_BUTTON" | translate }}</span></button>    
+</div>
+
