@@ -2,20 +2,22 @@ import { Component, HostListener, Input } from '@angular/core';
 import { ThemeService } from '../../services/theme.service';
 import { ModalComponent } from '../modal/modal.component';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { LanguageService } from '../../services/translate.service';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [ModalComponent],
+  imports: [ModalComponent, TranslateModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
-  constructor(private themeService: ThemeService, private dialog: MatDialog, private translateService: LanguageService){}
   isDarkTheme: boolean = false;
   currentLang = 'en';
+
+  constructor(private themeService: ThemeService, private dialog: MatDialog, private translate: TranslateService){
+    this.translate.setDefaultLang('en');
+  }
   
   toggleTheme() {
     this.themeService.toggleTheme(); // Usar el servicio (si corresponde)
@@ -24,7 +26,8 @@ export class HeaderComponent {
   }
 
   toggleLanguage(){
-  
+    this.currentLang = this.currentLang === 'en' ? 'es' : 'en';
+    this.translate.use(this.currentLang);
   }
 
   openProjectModal() {
