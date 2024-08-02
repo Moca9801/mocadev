@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule, MatTooltipModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
@@ -30,6 +32,10 @@ export class SkillsComponent {
       { name: 'Figma', percentage: 75 }
     ]
   };
+
+  constructor(private translate: TranslateService){
+    this.translate.setDefaultLang('en');
+  }
 
   get currentSkills() {
     return this.skills[this.sections[this.currentSectionIndex]];

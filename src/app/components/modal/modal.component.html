@@ -2,14 +2,12 @@
   <div class="modal-content">
     <header class="d-flex align-items-center justify-content-between p-3">
       <div class="fw-lighter fs-6">v0.4.0</div>
-      <div class="fs-6 fw-lighter title">Developed by:</div>
-      <button matTooltip="close" matTooltipPosition="below"><span class="header-btn material-icons fs-6 fw-lighter" mat-dialog-close >close</span></button>
+      <div class="fs-6 fw-lighter title">{{ "MODAL_INFO_TITLE" | translate}}</div>
+      <button [matTooltip]=" 'BUTTON_CLOSE' | translate" matTooltipPosition="below"><span class="header-btn material-icons fs-6 fw-lighter" mat-dialog-close >close</span></button>
     </header>
     <div class="modal-body">
       <h3>Angel Israel Moreno Castellanos</h3>
-      <p class="description">
-        This portfolio aims to share my skills, experiences, and career with you. My passion for engineering and software development motivates me every day to build tools that contribute positively to the world.      
-      </p>
+      <p class="description">{{ "MODAL_INFO_DESCRIPT" | translate }}</p>
       <img src="../../../assets/img/Angel_Moreno.png" alt="">
     </div>
   </div>

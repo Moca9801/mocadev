@@ -1,7 +1,12 @@
-<div class="fs-2 fw-medium title">Contacts</div>
+<div class="fs-2 fw-medium title">{{"CONTACT_TITLE" | translate}}</div>
+<div class="d-flex align-items-center justify-content-center subtitle fs-4 fw-medium">{{"CONTACT_SUBTITLE" | translate}}
+  <button class="m-2" id="myBtn"  [matTooltip]=" 'COPY' | translate" matTooltipPosition="right" (click)="copyToClipboard()">
+    <span class="material-icons fs-6 fw-lighter">{{ copy_status ? 'check' : 'content_copy' }}</span>
+  </button>    
+</div>
 
 <ul class="social-media">
-  <li class="icon-content">
+  <li class="icon-content" [matTooltip]="'CONTACT_TOOLTIP_LINKEDIN' | translate" matTooltipPosition="below">
     <a href="https://www.linkedin.com/in/angel-israel-moreno-castellanos-aab217223/" target="_blank" aria-label="LinkedIn" data-social="linkedin">
       <div class="filled"></div>
       <svg
@@ -19,9 +24,9 @@
         ></path>
       </svg>
     </a>
-    <div class="tooltip">LinkedIn</div>
+    <div class="tooltip" matTooltip="Visitar perfil" matTooltipPosition="below">LinkedIn</div>
   </li>
-  <li class="icon-content">
+  <li class="icon-content" [matTooltip]="'CONTACT_TOOLTIP_LINKEDIN' | translate" matTooltipPosition="below">
     <a href="https://github.com/Moca9801" target="_blank" aria-label="GitHub" data-social="github">
       <div class="filled"></div>
       <svg
@@ -41,7 +46,7 @@
     </a>
     <div class="tooltip">GitHub</div>
   </li>
-  <li class="icon-content">
+  <li class="icon-content" [matTooltip]="'CONTACT_TOOLTIP_WP' | translate" matTooltipPosition="below">
     <a href="https://wa.me/523334820276" target="_blank" aria-label="WhatsApp" data-social="whatsapp">
       <div class="filled"></div>
       <svg
@@ -65,7 +70,7 @@
     </a>
     <div class="tooltip">WhatsApp</div>
   </li>
-  <li class="icon-content">
+  <li class="icon-content"  [matTooltip]="'CONTACT_TOOLTIP_EMAIL' | translate" matTooltipPosition="below">
     <a href="mailto:aimc9801@gmail.com" aria-label="Gmail" data-social="gmail">
       <div class="filled"></div>
       <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" width="100" height="100" viewBox="0 0 50 50">

@@ -2,15 +2,15 @@
   <div class="modal-content">
     <header class="d-flex align-items-center justify-content-between p-3">
       <div id="myBtn" class="d-flex">
-        <button (click)="previousProject()" matTooltip="Previus project" matTooltipPosition="below">
+        <button (click)="previousProject()" [matTooltip]=" 'PREV_BUTTON'|translate " matTooltipPosition="below">
           <span class="header-btn material-icons fs-6 fw-lighter">arrow_back_ios</span>
         </button>    
-        <button (click)="nextProject()" matTooltip="Next project" matTooltipPosition="below">
+        <button (click)="nextProject()" [matTooltip]=" 'NEXT_BUTTON' | translate " matTooltipPosition="below">
           <span class="header-btn material-icons fs-6 fw-lighter">arrow_forward_ios</span>
         </button>   
       </div>
-      <div class="fs-5 fw-lighter title">{{data.title}}</div>
-      <button matTooltip="close" matTooltipPosition="below"><span class="header-btn material-icons fs-6 fw-lighter" mat-dialog-close >close</span></button>
+      <div class="fs-5 fw-lighter title">{{data.title | translate}}</div>
+      <button [matTooltip]=" 'BUTTON_CLOSE' | translate " matTooltipPosition="below"><span class="header-btn material-icons fs-6 fw-lighter" mat-dialog-close >close</span></button>
     </header>
   
     <div class="modal-body">
@@ -62,7 +62,7 @@
             </button>
           }
         </div>
-        <a class="link-button" [href]="data.link" target="_blank">Visit page</a>
+        <a class="link-button" [href]="data.link" target="_blank">{{ "MODAL_PROJECT_BUTTON" | translate}}</a>
       </div>
     </div>
   </div>

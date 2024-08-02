@@ -1,5 +1,5 @@
 <header class="d-flex align-items-center justify-content-between p-3">
-    <button id="myBtn" (click)="openProjectModal()"><span class="material-icons fs-6 fw-lighter">info</span></button>    
+    <button id="myBtn" (click)="openProjectModal()"  [matTooltip]=" 'INFO' | translate" matTooltipPosition="below"><span class="material-icons fs-6 fw-lighter">info</span></button>    
     <div class="fs-5 fw-lighter title">{{"HEADER_TITLE" | translate}}</div>
     <div class="d-flex ">
         <button (click)="toggleTheme()">

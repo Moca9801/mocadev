@@ -50,7 +50,7 @@
                     </svg>
                 </div>
                 <div class="fs-4 fw-bold" style="margin-bottom: -.5rem;">Angel Moreno</div>
-                <div class="fs-6 fw-light">Developer</div>
+                <div class="fs-6 fw-light">{{ "OCCUPATION" | translate }}</div>
             </div>
                
             <div class="radio-buttons-container">
@@ -58,28 +58,28 @@
                   <input name="radio-group" id="radio2" class="radio-button__input" type="radio" (change)="onRadioChange('Bio')" checked>
                   <label for="radio2" class="radio-button__label">
                     <span class="radio-button__custom"></span>
-                    Bio
+                    {{"BIO_TITLE" | translate}}
                   </label>
                 </div>
                 <div class="radio-button">
                     <input name="radio-group" id="radio3" class="radio-button__input" type="radio" (change)="onRadioChange('Projects')">
                     <label for="radio3" class="radio-button__label">
                       <span class="radio-button__custom"></span>
-                      Projects
+                      {{"PROJECTS_TITLE" | translate}}
                     </label>
                   </div>
                 <div class="radio-button">
                   <input name="radio-group" id="radio1" class="radio-button__input" type="radio" (change)="onRadioChange('Skills')">
                   <label for="radio1" class="radio-button__label">
                     <span class="radio-button__custom"></span>
-                    Skills
+                    {{"SKILLS_TITLE" | translate}}
                   </label>
                 </div>
                 <div class="radio-button">
                   <input name="radio-group" id="radio4" class="radio-button__input" type="radio" (change)="onRadioChange('Contact')">
                   <label for="radio4" class="radio-button__label">
                     <span class="radio-button__custom"></span>
-                    Contact
+                    {{"CONTACT_TITLE" | translate}}
                   </label>
             </div>
         </div>   
