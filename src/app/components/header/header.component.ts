@@ -1,14 +1,14 @@
 import { Component, HostListener, Input } from '@angular/core';
 import { ThemeService } from '../../services/theme.service';
 import { ModalComponent } from '../modal/modal.component';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { MatTooltip } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [ModalComponent, TranslateModule, MatTooltip],
+  imports: [ModalComponent, TranslateModule, MatTooltip, MatDialogModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -32,7 +32,7 @@ export class HeaderComponent {
   }
 
   openProjectModal() {
-    const dialogRef: MatDialogRef<ModalComponent> = this.dialog.open(ModalComponent, {
+    this.dialog.open(ModalComponent, {
       data: {
         language: this.translate
       }

@@ -1,8 +1,8 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, HostListener, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-
 
 interface Image {
   src: string;
@@ -13,7 +13,7 @@ interface Image {
 @Component({
   selector: 'app-modal-projects',
   standalone: true,
-  imports: [MatDialogModule, MatTooltipModule, TranslateModule],
+  imports: [CommonModule, MatDialogModule, MatTooltipModule, TranslateModule],
   templateUrl: './modal-projects.component.html',
   styleUrls: ['./modal-projects.component.scss']
 })
@@ -23,12 +23,18 @@ export class ModalProjectsComponent implements OnInit {
 
 
   constructor(
-    public dialogRef: MatDialogRef<ModalProjectsComponent>,
+    private dialogRef: MatDialogRef<ModalProjectsComponent>,
     private translate: TranslateService,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
     this.translate = this.data.language;
+  }
 
+  @HostListener('window:click', ['$event'])
+  onWindowClick(event: MouseEvent) {
+    if (event.target === document.getElementById('MyModal-2')) {
+      this.dialogRef.close();
+    }
   }
 
   ngOnInit() {

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
+import { Component, HostListener, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
@@ -12,8 +12,14 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './modal-cv.component.scss'
 })
 export class ModalCvComponent {
-  constructor(private translate: TranslateService, @Inject(MAT_DIALOG_DATA) public data: any
-){
+  constructor(private translate: TranslateService, public dialogRef: MatDialogRef<ModalCvComponent>, @Inject(MAT_DIALOG_DATA) public data: any){
     this.translate = this.data.language;
+  }
+
+  @HostListener('window:click', ['$event'])
+  onWindowClick(event: MouseEvent) {
+    if (event.target === document.getElementById('MyModal-1')) {
+      this.dialogRef.close();
+    }
   }
 }

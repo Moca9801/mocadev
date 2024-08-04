@@ -18,7 +18,7 @@ export class BioComponent {
   }
 
   openProjectModal() {
-    const dialogRef: MatDialogRef<ModalCvComponent> = this.dialog.open(ModalCvComponent, {
+    this.dialog.open(ModalCvComponent, {
       data:{
         language: this.translate
       }

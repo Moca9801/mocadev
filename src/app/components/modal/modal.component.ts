@@ -1,7 +1,7 @@
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
-import { Component, Inject } from '@angular/core';
-import { MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Component, HostListener, Inject } from '@angular/core';
+import { MatDialogModule, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
@@ -12,8 +12,15 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   styleUrl: './modal.component.scss'
 })
 export class ModalComponent {
-  constructor(private translate: TranslateService, @Inject(MAT_DIALOG_DATA) public data: any){
+  constructor(private translate: TranslateService, private dialogRef: MatDialogRef<ModalComponent>, @Inject(MAT_DIALOG_DATA) public data: any){
     this.translate = this.data.language;
 
+  }
+
+  @HostListener('window:click', ['$event'])
+  onWindowClick(event: MouseEvent) {
+    if (event.target === document.getElementById('MyModal-3')) {
+      this.dialogRef.close;
+    }
   }
 }
