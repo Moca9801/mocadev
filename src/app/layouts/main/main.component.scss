@@ -110,6 +110,15 @@ img{
   z-index: 1;
 }
 
+@supports (-moz-appearance: none) {
+  .blob {
+    width: 150px;
+    height: 150px;
+    filter: blur(100px) ;  
+    will-change: transform; /* Añade esta línea */
+  }
+}
+
 .svg-frame {
   position: relative;
   width: 300px;

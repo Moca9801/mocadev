@@ -68,6 +68,14 @@
     z-index: 1;
 }
 
+@supports (-moz-appearance: none) {
+  .blob {
+    width: 40px;
+    height: 40px;
+    filter: blur(100px);
+  }
+}
+
 
 .svg-frame {
     position: relative;
