@@ -20,7 +20,7 @@ export class ModalComponent {
   @HostListener('window:click', ['$event'])
   onWindowClick(event: MouseEvent) {
     if (event.target === document.getElementById('MyModal-3')) {
-      this.dialogRef.close;
+      this.dialogRef.close();
     }
   }
 }
