@@ -94,7 +94,11 @@
     left: 0;
   }
   
-  @media (max-width: 1350px) {
+  @media (max-width: 1450px) {
+    .container{
+      padding: 0 !important;
+    }
+    
     .card-title {
       display: flex;
       flex-direction: row;
